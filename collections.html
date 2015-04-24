@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="underscore_button">click Me</button>
+	<script src="js/lib/jquery-1.7.2.js"></script>
+	<script src="js/lib/underscore.js"></script>
+	<script>
+	//_.each([1,2,3], alert);
+	_.forEach({one: 1, two: 2, three: 3}, function(item , key, obj) {
+		console.log(obj);
+	});
+	var sum = _.reduce([1, 2, 3], function(memo, num){ return memo + num; }, 0);
+
+	var listWhere = [
+		{title: '111', name: 'angck', year: 1988},
+		{title: '222', name: 'yonni', year: 1988},
+		{title: '333', name: 'angck', year: 1988},
+		{title: '444', name: 'zenta', year: 1988},
+	];
+	var matchData = _.where(listWhere, {name: "angck", year: 1988});
+	var even = _.find([1, 2, 3, 4, 5, 6], function(num){ return num % 2 == 0; });
+	console.log(even);
+
+	var t = _.iteratee(function() {
+
+	}, document.body);
+
+	var buttonView = {
+	  label  : 'underscore',
+	  onClick: function(){ alert('clicked: ' + this.label); },
+	  onHover: function(){ console.log('hovering: ' + this.label); }
+	};
+	_.bindAll(buttonView, 'onClick', 'onHover');
+	jQuery('#underscore_button').bind('click', buttonView.onClick);
+	jQuery('#underscore_button').bind('mouseover', buttonView.onHover);
+	</script>
+</body>
+</html>

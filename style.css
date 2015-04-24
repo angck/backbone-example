@@ -1,0 +1,13 @@
+/*
+ *  create by wangzhixiang at 2015/04/24
+ */
+@charset "utf-8";
+body {font-family: "Hiragino Sans GB","microsoft yahei"; background: #eee;}
+.creat_head {background: #37C249;}
+.creat_head .creat_head_con .creat_con ul li:hover span,.creat_head .create-action li.save:hover,.creat_head .create-action li.publish:hover {background-color: #049600;}
+.wrapper { padding: 80px 0 0;}
+.pageList {width: 260px; height: 568px; float: left; margin-right: 30px; background: #fff;}
+.pageList h2 {background: #37C249; font-size: 16px; padding: 10px 15px; color: #fff; line-height: 1;}
+.setViewContent {width: 300px; height: 568px; float: right; background: #fff;}
+.appView {width: 320px; height: 568px; background-image: url(images/5.png); background-repeat: no-repeat; background-size: 320px; border: 1px solid #fff; float: left;}
+.appView .appTitle {padding-top: 20px; height: 64px; line-height: 44px; text-align: center; color: #fff; font-size: 18px;}
