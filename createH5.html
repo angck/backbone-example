@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="http://as.eqxiu.com/assets/eqShow-3.1.3.css"/>
+    <link rel="stylesheet" href="http://as.eqxiu.com/assets/eqShow-3.1.5.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,38 +12,7 @@
 		<div class="creat_head_con clearfix">
 			<div class="creat_logo" style="width: 180px; height: 50px;"></div>
 			<div class="creat_con clearfix">
-				<ul class="comp_panel clearfix">
-				  <li ctype="2" class="text">
-					<span>文本</span>
-				  </li>
-				  <li ctype="3" class="bg">
-					<span>背景</span>
-				  </li>
-				  <li ctype="9" class="music">
-					<span>音乐</span>
-				  </li>  
-				  <li ctype="v" class="vedio">
-					<span>视频</span>
-				  </li>        
-				  <li ctype="4" class="image">
-					<span>图片</span>
-				  </li>
-				  <li ctype="5" class="textarea">
-					<span>输入框</span>
-				  </li>
-				  <li ctype="6" class="button">
-					<span>按钮</span>
-				  </li>
-				  <li ctype="p" class="images">
-					<span>图集</span>
-				  </li>
-				  <li ctype="8" class="phone">
-					<span>电话</span>
-				  </li>          
-				  <li ctype="g101" class="contact">
-					<span>联系人</span>
-				  </li>
-				</ul>
+				<ul class="comp_panel id="navigator" clearfix"></ul>
 		  	</div>
 			<div class="create-action">
 				<ul>
@@ -57,21 +26,33 @@
 		<div class="container">
 			<div class="pageList">
 				<h2>页面管理</h2>
+				<ul id="pageList">
+					<li class="current"><span>1</span>第1页<a href="javascript:void(0);" class="destroy">×</a></li>
+				</ul>
+				<a id="addPage" href="javascript:void(0);">+</a>
 			</div>
 			<div class="appView">
-				<div class="appTitle">页面标题</div>
-				<div class="appContentView">
-					
-				</div>
+				<div class="appTitle" contentEditable="true">页面标题</div>
+				<div class="appContentView"></div>
 			</div>
 			<div class="setViewContent">
 				
 			</div>
+			<script src="js/lib/require.js" data-main="js/app"></script>
 		</div>
 	</div>
-	<script>
-
+	<script type="text/template" id="PLTemplate">
+		<ul id="pageList">
+			<% _.each(pageList, function(item, i) { %>
+			<li class="current"><span><%=i%></span>第<%=i%>页<a href="javascript:void(0);" class="destroy">×</a></li>
+			<% }); %>
+		</ul>
+		<a id="addPage" href="javascript:void(0);">+</a>
 	</script>
-    <script src="http://cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+	<script type="text/template" id="navTemplate">
+		<% _.each(navList, function(item, i) { %>
+			<li ctype="<%=%>" class="text"><span>文本</span></li>
+		<% }) %>
+	</script>
 </body>
 </html>

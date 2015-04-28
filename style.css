@@ -3,11 +3,21 @@
  */
 @charset "utf-8";
 body {font-family: "Hiragino Sans GB","microsoft yahei"; background: #eee;}
+a:focus {text-decoration: none;}
 .creat_head {background: #37C249;}
 .creat_head .creat_head_con .creat_con ul li:hover span,.creat_head .create-action li.save:hover,.creat_head .create-action li.publish:hover {background-color: #049600;}
 .wrapper { padding: 80px 0 0;}
-.pageList {width: 260px; height: 568px; float: left; margin-right: 30px; background: #fff;}
+.pageList {width: 260px; height: 568px; float: left; margin-right: 30px; background: #fff; padding: 0 0 40px; position: relative;}
 .pageList h2 {background: #37C249; font-size: 16px; padding: 10px 15px; color: #fff; line-height: 1;}
 .setViewContent {width: 300px; height: 568px; float: right; background: #fff;}
 .appView {width: 320px; height: 568px; background-image: url(images/5.png); background-repeat: no-repeat; background-size: 320px; border: 1px solid #fff; float: left;}
 .appView .appTitle {padding-top: 20px; height: 64px; line-height: 44px; text-align: center; color: #fff; font-size: 18px;}
+#pageList {padding: 10px 10px 0; overflow: auto; height: 493px;}
+#pageList li {line-height: 20px; background: #ddd; margin: 0 0 10px; padding: 10px; cursor: pointer; color: #666; position: relative;}
+#pageList li.current {background: #37C249; color: #fff;}
+#pageList li.current span {color: #666;}
+#pageList .destroy {position: absolute; top: 50%; right: 20px; margin: -10px; width:20px; height: 20px; line-height: 20px; text-align: center; background: rgba(0,0,0, .6); color: #fff; border-radius: 100%; display: none;}
+#pageList li:hover .destroy {display: block;}
+#pageList span {float: left; background: #fff; width: 20px; line-height: 20px; text-align: center; border-radius: 100%; font-size: 12px; font-family: Arial; margin-right: 10px;}
+#addPage {background: #999; position: absolute; bottom: 0; left: 0; height: 40px; width: 100%; text-align: center; line-height: 35px; color: #fff; font-size: 30px;}
+#addPage:hover {background: #555;}
