@@ -51,7 +51,7 @@
 	</script>
 	<script type="text/template" id="navTemplate">
 		<% _.each(navList, function(item, i) { %>
-			<li ctype="<%=%>" class="text"><span>文本</span></li>
+			<li ctype="<%=item.type%>" class="text"><span><%=item.text%></span></li>
 		<% }) %>
 	</script>
 </body>
