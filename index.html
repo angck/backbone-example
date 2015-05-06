@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>途牛H5页面制作工具</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper" id="appView">
+		<div class="creat_head ng-scope">
+			<div class="creat_head_con clearfix">
+				<div class="creat_logo" style="width: 180px; height: 50px;"></div>
+				<div class="creat_con clearfix">
+					<ul class="comp_panel clearfix" id="navigator"></ul>
+			  	</div>
+				<div class="create-action">
+					<ul>
+						<li class="act-border save"><span class="create-save">保存</span></li>
+						<li class="publish"><span class="create-publish">发布</span></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="pageList">
+				<h2>页面管理</h2>
+				<ul id="pageList">
+					<!-- <li class="current"><span>1</span>第1页<a href="javascript:void(0);" class="destroy">×</a></li>
+					<li class=""><span>1</span>第2页<a href="javascript:void(0);" class="destroy">×</a></li> -->
+				</ul>
+				<a id="addPage" href="javascript:void(0);">+</a>
+			</div>
+			<div class="appView">
+				<div class="appTitle" contentEditable="true">页面标题</div>
+				<div class="appContentView">
+					
+				</div>
+				<a href="javascript:void(0);" class="pageBG">×背景</a>
+				<a href="javascript:void(0);" class="appSound">×音乐</a>
+			</div>
+			<div class="setViewContent">
+
+			</div>
+		</div>
+	</div>
+	<script type="text/template" id="PLTemplate">
+		<li class="<% if(aid == 1) { %> current <% } %>"><span><%=aid%></span>第<%=aid%>页<a href="javascript:void(0);" class="destroy">×</a></li>
+	</script>
+	<script type="text/template" id="navTemplate">
+		<% _.each(navList, function(item, i) { %>
+			<li class="<%=item.className%>"><span class="dialog-model" ctype="<%=item.type%>" ><%=item.text%></span></li>
+		<% }) %>
+	</script>
+    <script src="js/lib/require.js" data-main="js/app"></script>
+</body>
+</html>

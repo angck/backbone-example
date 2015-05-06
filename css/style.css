@@ -1,0 +1,83 @@
+html { color: #000; background: #eee; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100% }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1 }
+body, button, input, select, textarea { font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53 }
+input, select, textarea { font-size: 100% }
+table { border-collapse: collapse; border-spacing: 0 }
+fieldset, img { border: 0 }
+iframe { display: block }
+abbr, acronym { border: 0; font-variant: normal }
+del { text-decoration: line-through }
+address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: 500 }
+ol, ul { list-style: none }
+caption, th { text-align: left }
+h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 500 }
+q:before, q:after { content: '' }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline }
+sup { top: -.5em }
+sub { bottom: -.25em }
+a { color: #08c }
+a:hover { text-decoration: underline }
+ins, a { text-decoration: none }
+code, kbd, pre, samp { font-family: monospace, serif; font-size: 1em }
+.fn-clear:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0 }
+.fn-clear { zoom: 1 }
+body .fn-hide { display: none }
+.fn-left, .fn-right { display: inline }
+.fn-left { float: left }
+.fn-right { float: right }
+.fn-text-overflow { overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.fn-linear { background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f1f1f1)); background: -moz-linear-gradient(top, #fcfcfc, #f1f1f1); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f1f1f1'); background: -o-linear-gradient(top, #fcfcfc, #f1f1f1); background: -ms-linear-gradient(top, #fcfcfc, #f1f1f1); background: linear-gradient(to bottom, #fcfcfc, #f1f1f1) }
+.fn-linear-light { background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9)); background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9'); background: -o-linear-gradient(top, #fcfcfc, #f9f9f9); background: -ms-linear-gradient(top, #fcfcfc, #f9f9f9); background: linear-gradient(to bottom, #fcfcfc, #f9f9f9) }
+.fn-rmb { font-family: arial; font-style: normal; padding-right: 4px }
+.fn-webkit-adjust { -webkit-text-size-adjust: none }
+.creat_head { height: 50px; background-color: #08a1ef; position: fixed; width: 100%; left: 0; right: 0; top: 0; z-index: 999 }
+.creat_head .creat_head_con { width: 1000px; left: 50%; margin-left: -500px; position: relative }
+.creat_head .creat_head_con .creat_logo, .creat_head .creat_head_con .creat_con { float: left; display: inline }
+.creat_head .creat_head_con .creat_save { float: right; padding-top: 7px }
+.creat_head .creat_head_con .creat_con ul { margin-left: 45px }
+.creat_head .creat_head_con .creat_con ul li { cursor: pointer; float: left; color: #FFF; width: 60px; text-align: center; height: 50px; line-height: 50px }
+.creat_head .creat_head_con .creat_con ul li span { display: block; padding-top: 10px; font-size: 10px; height: 40px; overflow: hidden }
+.creat_head .creat_head_con .creat_con ul li:hover span { background-color: #9ad64b }
+.creat_head .creat_head_con .creat_con ul a { color: #FFF }
+.creat_head .creat_head_con .creat_con ul .text span { background: url(../images/icon_24.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .bg span { background: url(../images/icon_03.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .music span { background: url(../images/icon_05.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .image span { background: url(../images/icon_07.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .textarea span { background: url(../images/icon_09.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .button span { background: url(../images/icon_11.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .images span { background: url(../images/icon_13.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .phone span { background: url(../images/icon_15.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .contact span { background: url(../images/icon_17.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .texiao span { background: url(../images/icon_19.png) center 7px no-repeat }
+.creat_head .creat_head_con .creat_con ul .vedio span { background: url(../images/icon_21.png) center 7px no-repeat }
+.creat_head .create-action { float: right; position: absolute; right: 0; margin-left: 10px }
+.creat_head .create-action ul li { cursor: pointer; float: left; color: #FFF; width: 50px; text-align: center; height: 50px; line-height: 50px }
+.creat_head .create-action ul li span { display: block; padding-top: 12px; font-size: 10px; height: 50px; overflow: hidden }
+.creat_head .create-action li.save:hover, .creat_head .create-action li.publish:hover { background-color: #9ad64b }
+.creat_head .create-action li.quit:hover { background-color: #c33 }
+.creat_head .create-action .create-save { background: url(../images/save.png) center 8px no-repeat }
+.creat_head .create-action .create-publish { background: url(../images/publish.png) center 8px no-repeat }
+body { background: #eee }
+a:focus, a:hover { text-decoration: none }
+.creat_head { background: #37C249 }
+.container { width: 1000px; margin: 0 auto }
+.creat_head .creat_head_con .creat_con ul li:hover span, .creat_head .create-action li.save:hover, .creat_head .create-action li.publish:hover { background-color: #049600 }
+.wrapper { padding: 80px 0 0 }
+.pageList { width: 260px; height: 528px; float: left; margin-right: 30px; background: #fff; padding: 0 0 40px; position: relative }
+.pageList h2 { background: #37C249; font-size: 16px; padding: 10px 15px; color: #fff; line-height: 1; font-weight: 200 }
+.setViewContent { width: 300px; height: 566px; float: right; background: #fff }
+.appView { width: 320px; height: 568px; background-image: url(../images/5.png); background-repeat: no-repeat; background-size: 320px; border: 1px solid #fff; float: left; position: relative }
+.appView .appTitle { padding-top: 20px; height: 44px; line-height: 44px; text-align: center; color: #fff; font-size: 18px }
+#pageList { padding: 10px 10px 0; overflow: auto; height: 493px }
+#pageList li { line-height: 20px; background: #ddd; margin: 0 0 10px; padding: 10px; cursor: pointer; color: #666; position: relative }
+#pageList li.current { background: #37C249; color: #fff }
+#pageList li.current span { color: #666 }
+#pageList .destroy { position: absolute; top: 50%; right: 20px; margin: -10px; padding: 1px 7px 2px; text-align: center; background: rgba(0, 0, 0, .6); color: #fff; border-radius: 100%; display: none }
+#pageList li:hover .destroy { display: block }
+#pageList span { float: left; background: #fff; width: 20px; line-height: 1; padding: 4px 0; text-align: center; border-radius: 100%; font-size: 10px; font-family: Arial; margin-right: 10px }
+#addPage { background: #666; position: absolute; bottom: 0; left: 0; height: 40px; width: 100%; text-align: center; line-height: 38px; color: #fff; font-size: 28px }
+#addPage:hover { background: #555 }
+.pageBG, .appSound { background: #666; color: #fff; position: absolute; left: -20px; top: 64px; width: 20px; padding: 2px 0 5px; text-align: center; line-height: 16px }
+.appSound { right: -20px; left: auto }
