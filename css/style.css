@@ -71,7 +71,8 @@ a:focus, a:hover { text-decoration: none }
 .appView { width: 320px; height: 568px; background-image: url(../images/5.png); background-repeat: no-repeat; background-size: 320px; border: 1px solid #fff; float: left; position: relative }
 .appView .appTitle { padding-top: 20px; height: 44px; line-height: 44px; text-align: center; color: #fff; font-size: 18px }
 #pageList { padding: 10px 10px 0; overflow: auto; height: 493px }
-#pageList li { line-height: 20px; background: #ddd; margin: 0 0 10px; padding: 10px; cursor: pointer; color: #666; position: relative }
+#pageList li { line-height: 20px; background: #ddd; margin: 0 0 10px; cursor: pointer; color: #666; position: relative }
+#pageList li strong {display: block; padding: 10px; }
 #pageList li.current { background: #37C249; color: #fff }
 #pageList li.current span { color: #666 }
 #pageList .destroy { position: absolute; top: 50%; right: 20px; margin: -10px; padding: 1px 7px 2px; text-align: center; background: rgba(0, 0, 0, .6); color: #fff; border-radius: 100%; display: none }

@@ -1,9 +1,3 @@
-/*!
-    localForage Backbone Adapter
-    Version 0.6.1
-    https://github.com/mozilla/localforage-backbone
-    (c) 2014 Mozilla, Apache License 2.0
-*/
 // backbone.localforage allows users of Backbone.js to store their collections
 // entirely offline with no communication to a REST server. It uses whatever
 // driver localForage is set to use to store the data (IndexedDB, WebSQL, or

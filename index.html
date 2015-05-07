@@ -44,7 +44,7 @@
 		</div>
 	</div>
 	<script type="text/template" id="PLTemplate">
-		<li class="<% if(aid == 1) { %> current <% } %>"><span><%=aid%></span>第<%=aid%>页<a href="javascript:void(0);" class="destroy">×</a></li>
+		<strong class="item"><span><%=aid%></span>第<%=aid%>页</strong><a href="javascript:void(0);" class="destroy">×</a>
 	</script>
 	<script type="text/template" id="navTemplate">
 		<% _.each(navList, function(item, i) { %>

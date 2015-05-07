@@ -4,9 +4,10 @@ require.config({
 		jquery: 'lib/jquery-1.7.2.min',
 		underscore: 'lib/underscore-min',
 		backbone: 'lib/backbone-min',
-		JSON: 'lib/json2',
 		localStorage: 'lib/backbone.localStorage',
+		localforage: 'lib/localforage',
 		indexeddb: 'lib/backbone.indexeddb',
+		JSON: 'lib/json2',
 		template: 'lib/template-native'
 	},
 	map: {
@@ -17,7 +18,7 @@ require.config({
 	}
 });
 
-require(['backbone', 'view/nav', 'collection/page', 'view/pages', 'indexeddb'], function(Backbone, ViewNav, CollectionPage, ViewPages, db) {
+require(['backbone', 'view/nav', 'collection/page', 'view/pages'], function(Backbone, ViewNav, CollectionPage, ViewPages) {
 	// 创建管理导航
 	var navList = [
 			{type: 1, className: 'text', text: '文本'},
@@ -35,7 +36,11 @@ require(['backbone', 'view/nav', 'collection/page', 'view/pages', 'indexeddb'], 
 			model: new Backbone.Model(navList)
 		});
 
+	var collPage = new CollectionPage;
+
 	var pageList = new ViewPages({
-		model: CollectionPage
+		model: collPage
 	});
+
+	collPage.fetch();
 });
