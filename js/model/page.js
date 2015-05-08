@@ -9,6 +9,12 @@ define('model/page', ['backbone', 'localforage', 'indexeddb'], function(Backbone
 		},
 		isChecked: function() {
 			return this.get('checked');
+		},
+		setCheck: function() {
+			this.save({checked: true});
+		},
+		unChecked: function() {
+			this.save({checked: false});
 		}
 	});
 });

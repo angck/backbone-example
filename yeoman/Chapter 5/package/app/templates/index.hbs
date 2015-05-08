@@ -1,0 +1,12 @@
+<div class="jumbotron">
+	<h1> {{ LearningYeomanCh5.config.feature.title }} </h1>
+	<img {{ bind-attr src=LearningYeomanCh5.config.feature.image }}/>
+	<p class="lead">
+		{{ LearningYeomanCh5.config.feature.body }}
+	</p>
+</div>
+<div class="marketing">
+	{{#each item in LearningYeomanCh5.config.features }}
+		{{ feature-item feature=item }}
+	{{/each}}
+</div>

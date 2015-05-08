@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "post.js",
+  "sourceRoot": "",
+  "sources": [
+    "post.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAA,WAAA;AACA,CADA,CACuD,CAAA,GAAvD,CAAO,EAAiD,aAAxD;CACC,CAAmC,OAA5B,OAAA;CAA4B,CAAE,EAAA,EAAF;EAAgB,EAA5C;CAA4C,CACzC,EAAT,GAAA;CAAS,CAAQ,GAAR,CAAA;CAAA,CAAwB,EAAxB,EAAe,CAAA;MAD0B;CAAA,CAExC,EAAV,IAAA;CAAU,CAAS,GAAT,CAAA;MAFwC;CAAnD,GAAO;CAD+C"
+}

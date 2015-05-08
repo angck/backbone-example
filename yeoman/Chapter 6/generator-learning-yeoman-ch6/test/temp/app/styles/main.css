@@ -1,0 +1,9 @@
+ /* Styles for my-test-site */
+   body{
+  background: fefefe;
+}
+.slim{
+  max-width:760px;
+} .center{
+  text-align:center;
+}

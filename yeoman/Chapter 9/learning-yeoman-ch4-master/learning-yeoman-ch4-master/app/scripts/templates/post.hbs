@@ -1,0 +1,20 @@
+<div class="media">
+	<a class="pull-left" href="#/posts/{{_id}}" data-cid="{{cid}}">
+	  <img class="media-object img-thumbnail" src="{{ image }}" alt="{{ title }}"/>
+	</a>
+	<div class="media-body clearfix">
+		<div class="header">
+			<a href="" ng-click="view(post._id)">
+				<h1 class="media-heading">{{title}}</h1>
+			</a>
+			<span>Posted on {{created}}</span> |
+			<a href="" class="btn btn-xs btn-default edit">
+				<i class="glyphicon glyphicon-pencil"></i> EDIT
+			</a>
+		</div>
+		
+		
+
+	  <p>{{ body }}</p>
+	</div>
+</div>

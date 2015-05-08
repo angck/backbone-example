@@ -1,0 +1,17 @@
+<div id="posts">
+	<div class="page-header">
+		<h1>Posts</h1>
+	</div>
+	<div class="list-group posts">
+		{{#each model}}
+		{{#link-to 'post' this classNames='list-group-item post'}}
+		<h4 class="list-group-item-heading title">{{ title }}</h4>
+		<p class="list-group-item-text body">
+			{{ body }}
+		</p>
+		{{/link-to}}
+		{{/each}}
+	</div>
+</div>
+
+{{outlet}}

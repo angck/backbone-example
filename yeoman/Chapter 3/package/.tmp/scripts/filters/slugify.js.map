@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "slugify.js",
+  "sourceRoot": "",
+  "sources": [
+    "slugify.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA,CAAA,WAAA;AAEA,CAFA,CAEyD,CAAA,GAAzD,CAAO,EAAP,aAAA;EACS,CAAR,EAAA,IAAA;CACC,EAAA,KAAA;CAAA,CAAA,CAAA,CAAA;CACA,GAAA,CAAA;CAAA,CAA2B,CAA3B,EAAW,CAAX,CAAM;MADN;CAEA,GAAA,KAAA;CAAA,EAAA,GAAA,KAAM;MAFN;CAGA,EAAA,QAAO;CALgD,EACxD;CADwD"
+}

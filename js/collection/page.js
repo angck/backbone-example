@@ -5,6 +5,10 @@ define('collection/page', ['backbone', 'localforage', 'indexeddb', 'model/page']
 		getOnePage: function(aid) {
 			return this.where({aid: aid});
 		},
+		removeAll: function() {
+			this.reset();
+        	localforage.clear();
+		},
 		comparator: 'aid'
 	});
 });

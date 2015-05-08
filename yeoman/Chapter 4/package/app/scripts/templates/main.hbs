@@ -1,0 +1,22 @@
+<div class="jumbotron hero-unit">
+	<h1>{{ feature.title }}</h1>
+	<img src="{{ feature.image}}" class="img-"/>
+	<p class="lead">
+		{{feature.body}}
+	</p>
+</div>
+<div class="marketing">
+	<ul class="media-list">
+		{{#each features}}
+			<li class="media feature">
+				<a class="pull-left" href="#">
+					<img alt="{{ title }}" src="{{ image }}" class="media-object"/>
+				</a>
+				<div class="media-body">
+					<h4 class="media-heading">{{title}}</h4>
+					<p>{{ body }}</p>
+				</div>
+			</li>
+		{{/each}}
+	</ul>
+</div>

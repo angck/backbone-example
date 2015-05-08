@@ -1,0 +1,30 @@
+<div id="post-edit">
+	<div class="page-header">
+		<h1>Edit {{title}}</h1>
+	</div>
+	<form role="form">
+		<div class="form-group">
+			<label for="title">Title</label>
+			{{input type="text"  class="form-control" value=title}}
+		</div>
+		<div class="form-group">
+			<label for="title">Slug</label>
+			{{input type="text"  class="form-control" value=slug disabled="true"}}
+		</div>
+		<div class="form-group">
+			<label for="image">Image</label>
+			{{input type="text" class="form-control" value=image}}
+		</div>
+		<div class="form-group">
+			<label for="body">Body</label>
+			{{textarea rows="5" class="form-control" value=body}}
+		</div>
+		<button class="btn btn-primary" {{action 'save'}}>
+			Update
+		</button>
+		<button class="btn btn-danger" {{action 'destroy'}}>
+			Delete
+		</button>
+	</form>
+</div>
+

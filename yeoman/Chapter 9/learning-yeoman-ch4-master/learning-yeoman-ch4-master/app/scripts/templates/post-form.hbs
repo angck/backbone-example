@@ -1,0 +1,73 @@
+
+<ol class="breadcrumb">
+	<li>
+		<a href="#">Home</a>
+	</li>
+	<li>
+		<a href="#/posts">Posts</a>
+	</li>
+	<li class="active">
+		Edit
+	</li>
+</ol>
+
+<div class="pull-right">
+	<a href="#/posts/{{_id}}" class="btn btn-default cancel"> Cancel </a>
+
+	<button class="btn btn-primary save" type="button">
+		Save
+	</button>
+	
+</div>
+<div class="page-header">
+	{{#if _id}}
+		<h1>Edit Post</h1>
+	{{else}}
+		<h1>New Post</h1>
+	{{/if}}
+</div>
+<div class="row">
+	<div class="col-xs-7 col-sm-8">
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label for="title" class="col-sm-3 control-label">Title:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="inputTitle" placeholder="Enter a Title" name="title" value="{{title}}">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="slug" class="col-sm-3 control-label">Slug:</label>
+				<div class="col-sm-9">
+					<input type="text" class="form-control" id="inputSlug" name="slug" value="{{slug}}" disabled="">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="body" class="col-sm-3 control-label">Body:</label>
+				<div class="col-sm-9">
+					<textarea class="form-control" rows="5" id="inputBody" placeholder="Enter some contents." name="body">{{body}}</textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="image" class="col-sm-3 control-label">Image:</label>
+				<div class="col-sm-9">
+					<input type="url" class="form-control" id="inputImage" placeholder="Enter a URL" name="image" value="{{image}}">
+				</div>
+			</div>
+			<!--div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+				<div class="pull-right">
+					<a href="#/posts/{{_id}}" class="btn btn-default cancel"> Cancel </a>
+					<button class="btn btn-primary" type="submit">
+						Submit
+					</button>
+				</div>
+				</div>
+			</div-->
+		</form>
+	</div>
+	<div class="col-xs-5 col-sm-4">
+		<aside class="well well-sm">
+			<img src="{{image}}" class="img-placeholder"/>
+		</aside>
+	</div>
+</div>

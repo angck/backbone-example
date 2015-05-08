@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "app-e2e.js",
+  "sourceRoot": "",
+  "sources": [
+    "app-e2e.coffee"
+  ],
+  "names": [],
+  "mappings": "AAAA;;;;CAAA;AAIA,CAJA,CAIsC,CAAA,KAAtC,CAAsC,kBAAtC;CAEI,CAAH,CAAkD,MAAlD,oCAAA;CACC,EAAA,CAAA,GAAA,GAAA;CAEO,IAAA,CAAP,CAAA,CAAO,GAAP;CAHD,EAAkD;CAFb"
+}

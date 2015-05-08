@@ -1,0 +1,19 @@
+<article id="app" class="container">
+	<header id="header" class="header">
+		<ul class="nav nav-pills pull-right">
+			{{#each menu}}
+				<li>
+					<a href="#{{href}}">{{title}}</a>
+				</li>
+			{{/each}}
+		</ul>
+		<h3 class="brand text-muted">{{sitetitle}}</h3>
+		<hr/>
+	</header>
+	<section id="content" class="content"></section>
+	<footer id="footer" class="footer">
+		<hr/>
+		<span class="app-sitecopy pull-left">{{ sitecopy }}</span>
+		<span class="app-version pull-right">{{ version }}</span>
+	</footer>
+</article> 

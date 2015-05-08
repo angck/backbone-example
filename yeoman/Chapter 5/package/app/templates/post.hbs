@@ -1,0 +1,23 @@
+<div id="post-details">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="header">
+				<a href="">
+					<h1 class="media-heading">{{model.title}}</h1>
+				</a>
+				<span>
+					Posted on {{model.created}}
+				</span> |
+
+				{{#link-to 'post.edit' model classNames='btn btn-default btn-xs edit'}}
+					<i class="glyphicon glyphicon-pencil"></i>
+					EDIT
+				{{/link-to}}
+			</div>
+			<section class="content">
+				{{format-markdown model.body}}
+			</section>
+		</div>
+	</div>
+</div>
+{{outlet}}

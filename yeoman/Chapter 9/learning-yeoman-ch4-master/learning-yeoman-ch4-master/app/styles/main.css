@@ -1,0 +1,68 @@
+
+body {
+    background: #fafafa;
+}
+ 
+
+
+body {
+    padding: 10px 25px;
+}
+
+.container {
+    max-width: 760px;
+}
+
+.brand a {
+    color: #999;
+    text-decoration: none;
+}
+
+.jumbotron {
+    text-align: center;
+    padding: 15px 25px;
+}
+
+.jumbotron h1 {
+
+}
+
+.jumbotron img {
+    margin: 15px auto;
+}
+
+.post {
+    cursor: pointer;
+    padding: 10px 5px;
+
+}
+
+.media img {
+    width: 55px;
+}
+
+.post .actions {
+    opacity: 0;
+}
+
+.post:hover .actions {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+footer {
+    color: #777 !important;
+    text-align: center;
+}
+
+.img-placeholder {
+    width: 100%;
+}
+
+.page-header {
+    margin: 15px 0;
+}
+
+

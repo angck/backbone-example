@@ -1,0 +1,24 @@
+<article class="container">
+	<header class="header">
+		<ul class="nav nav-pills pull-right">
+			{{#each LearningYeomanCh5.config.menu}}
+			<li>
+				<a {{bind-attr href=href}}>{{ title }}</a>
+			</li>
+			{{/each}}
+		</ul>
+		<h3 class="brand text-muted"> {{ LearningYeomanCh5.config.sitetitle }} </h3>
+		<hr />
+	</header>
+	<section class="">
+		{{outlet}}
+	</section>
+	<footer class="footer">
+		<p class="pull-left">
+			{{ LearningYeomanCh5.config.sitecopy }}
+		</p>
+		<p class="pull-right">
+			{{ LearningYeomanCh5.config.version }}
+		</p>
+	</footer>
+</article>

@@ -1,0 +1,28 @@
+/* Put your CSS here */
+@import url('//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css');
+body {
+	padding: 5px 25px;
+}
+.container {
+	max-width: 760px;
+}
+.jumbotron {
+	padding: 10px;
+	text-align: center;
+}
+.jumbotron img {
+	margin: 15px auto;
+}
+.feature{
+
+}
+.media img {
+	width: 55px;
+	
+}
+footer {
+    margin-top:25px;
+    padding-top: 19px;
+    color: #777;
+    border-top: 1px solid #e5e5e5;
+}

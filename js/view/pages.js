@@ -6,7 +6,7 @@ define('view/pages', ['backbone', 'view/page'], function(Backbone, PageView) {
 		},
 		initialize: function() {
 			this.listenTo(this.model, 'add', this.addOne);
-			this.listenTo(this.model, 'change', this.setChecked);
+			// this.listenTo(this.model, 'change', this.setChecked);
 			this.listenTo(this.model, 'remove', this.removeItem);
 			this._itemsView = {};
 		},
@@ -56,8 +56,17 @@ define('view/pages', ['backbone', 'view/page'], function(Backbone, PageView) {
 				return model.get('aid') > id
 			});
 		},
-		setChecked: function() {
-			console.log(111111);
-		}
+		/*filterModels: function(model) {
+			return this.model.filter(function(m) {
+				return model.id != m.id
+			});
+		},*/
+		/*setChecked: function(model, options) {
+			this.model.each(function(item, i, models){
+				if(item.id != model.id) {
+					item.unChecked()
+				}
+			});
+		}*/
 	});
 });

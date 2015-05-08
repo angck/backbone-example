@@ -25,13 +25,19 @@ define('view/page', ['backbone', 'collection/page'], function(Backbone) {
 			this.model.destroy();
 		},
 		setChecked: function() {
-			this.model.get('checked') && !this.$el.hasClass('current') && this.$el.addClass('current')
+			console.log(this.model.isChecked());
+			this.model.isChecked() && !this.$el.hasClass('current') && this.$el.addClass('current')
 		},
 		dialog: function() {
-			/*!this.model.get('checked') && this.model.save({
-				checked: true
-			});*/
-			this.model.isChecked()
+			var self = this;
+			if(self.model.isChecked()) return;
+			this.model.collection.each(function(item, i, models){
+				if(item.id != self.model.id) {
+					item.isChecked() && item.unChecked()
+				} else {
+					!self.model.isChecked() && self.model.setCheck()
+				}
+			});
 		}
 	});
 });

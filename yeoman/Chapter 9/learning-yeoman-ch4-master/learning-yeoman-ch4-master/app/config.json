@@ -1,0 +1,17 @@
+{
+	"modules": {
+		"base": {
+			"scripts": ["bower_components/underscore/underscore-min.js", "bower_components/backbone/backbone-min.js", 
+			"bower_components/jquery/jquery.min.js",
+			"bower_components/modernizr/modernizr.js"
+			]
+		},
+		"pages": {
+			"scripts": ["js/routers/pages.js", "js/views/pages/index.js", "etc"],
+			"routes": {
+				"": "index",
+				"contact": "contact"
+			}
+		}
+	}
+}

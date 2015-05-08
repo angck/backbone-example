@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<<<<<<< HEAD
+    <head>
+        <title>Jasmine Spec Runner</title>
+        <link rel="stylesheet" href="bower_components/jasmine/lib/jasmine-core/jasmine.css">
+    </head>
+    <body>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="bower_components/jasmine/lib/jasmine-core/jasmine.js"></script>
+        <script src="bower_components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
+		<script src="bower_components/jasmine-jquery/lib/jasmine-jquery.js">
+
+        <!-- include source files here... -->
+
+        <!-- include spec files here... -->
+        <script src="spec/test.js"></script>
+
+        <script>
+            (function() {
+                var jasmineEnv = jasmine.getEnv();
+                jasmineEnv.updateInterval = 1000;
+                var htmlReporter = new jasmine.HtmlReporter();
+                jasmineEnv.addReporter(htmlReporter);
+                jasmineEnv.specFilter = function(spec) {
+                    return htmlReporter.specFilter(spec);
+                };
+                var currentWindowOnload = window.onload;
+                window.onload = function() {
+                    if (currentWindowOnload) {
+                        currentWindowOnload();
+                    }
+                    execJasmine();
+                };
+                function execJasmine() {
+                    jasmineEnv.execute();
+                }
+            })();
+        </script>
+    </body>
+=======
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner</title>
+
+  
+  <link rel="stylesheet" type="text/css" href="../.grunt/grunt-contrib-jasmine/jasmine.css">
+  
+
+  <script src=".grunt/grunt-contrib-jasmine/require.js"></script>
+  <script>
+    require.onError = function(error) {
+      var message = error.requireType + ': ';
+      if (error.requireType === 'scripterror' || error.requireType === 'notloaded' && error.requireModules) {
+        message += 'Illegal path or script error: ' + '[\'' + error.requireModules.join("', '") + '\']';
+      } else {
+        message += error.message;
+      }
+
+      throw Error(message);
+    };
+  </script>
+
+  
+  
+  <script src="../.grunt/grunt-contrib-jasmine/jasmine.js"></script>
+  
+  <script src="../.grunt/grunt-contrib-jasmine/jasmine-html.js"></script>
+  
+  <script src="../../../test/bower_components/jasmine-jquery/lib/jasmine-jquery.js"></script>
+  
+  
+
+  <script>
+    
+
+    
+      require.config({
+  "shim": {
+    "underscore": {
+      "exports": "_"
+    },
+    "backbone": {
+      "deps": [
+        "underscore",
+        "jquery"
+      ],
+      "exports": "Backbone"
+    },
+    "bootstrap": {
+      "deps": [
+        "jquery"
+      ],
+      "exports": "jquery"
+    },
+    "handlebars": {
+      "exports": "Handlebars"
+    }
+  },
+  "paths": {
+    "jquery": "../../app/bower_components/jquery/jquery",
+    "backbone": "../../app/bower_components/backbone/backbone",
+    "underscore": "../../app/bower_components/underscore/underscore",
+    "bootstrap": "../bower_components/sass-bootstrap/dist/js/bootstrap",
+    "handlebars": "../../app/bower_components/handlebars/handlebars",
+    "config": "config",
+    "app": "app"
+  },
+  "baseUrl": ".tmp/scripts"
+});
+    
+  </script>
+
+  <script>
+    function launchTest() {
+    require([
+      
+        
+        '../../../.tmp/scripts/app' ,
+      
+        
+        '../../../.tmp/scripts/collections/posts' ,
+      
+        
+        '../../../.tmp/scripts/config' ,
+      
+        
+        '../../../.tmp/scripts/main' ,
+      
+        
+        '../../../.tmp/scripts/models/post' ,
+      
+        
+        '../../../.tmp/scripts/routes/app' ,
+      
+        
+        '../../../.tmp/scripts/templates' ,
+      
+        
+        '../../../.tmp/scripts/views/about' ,
+      
+        
+        '../../../.tmp/scripts/views/app' ,
+      
+        
+        '../../../.tmp/scripts/views/main' ,
+      
+        
+        '../../../.tmp/scripts/views/post-detail' ,
+      
+        
+        '../../../.tmp/scripts/views/post-form' ,
+      
+        
+        '../../../.tmp/scripts/views/post' ,
+      
+        
+        '../../../.tmp/scripts/views/posts' 
+      
+    ],
+    function(){
+      require(['../.tmp/spec/app.js','../.tmp/spec/post.js','../.tmp/spec/posts.js','../.tmp/spec/router.js','../.grunt/grunt-contrib-jasmine/reporter.js'], function(){
+        require(['../.grunt/grunt-contrib-jasmine/jasmine-helper.js'], function(){
+          // good to go! Our tests should already be running.
+        })
+      })
+    }
+    )
+  }
+  </script>
+
+  
+  <script>
+  launchTest();
+  </script>
+  
+</head>
+<body>
+</body>
+>>>>>>> develop
+</html>
