@@ -4,7 +4,7 @@ define('view/page', ['backbone', 'collection/page'], function(Backbone) {
 		template: _.template($('#PLTemplate').html()),
 		events: {
 			'click .destroy': 'deleteItem',
-			'click strong': 'dialog'
+			'click strong': 'editElement'
 		},
 		initialize: function() {
 			this.listenTo(this.model, 'change', this.render);
@@ -13,10 +13,12 @@ define('view/page', ['backbone', 'collection/page'], function(Backbone) {
 			// build the model localeForage key only for debug purpose
 			// at this point this key might not have been set if no sync
 			// operation has been made
+			// console.log(this.model.get('aid'));
 			this.model.sync._localeForageKeyFn(this.model);
 			this.setChecked();
 			this.$el.html(this.template({
-				aid: this.model.get('aid')
+				aid: this.model.get('aid'),
+				checked: this.model.get('checked')
 			}));
 			return this;
 		},
@@ -25,19 +27,11 @@ define('view/page', ['backbone', 'collection/page'], function(Backbone) {
 			this.model.destroy();
 		},
 		setChecked: function() {
-			console.log(this.model.isChecked());
 			this.model.isChecked() && !this.$el.hasClass('current') && this.$el.addClass('current')
 		},
-		dialog: function() {
-			var self = this;
-			if(self.model.isChecked()) return;
-			this.model.collection.each(function(item, i, models){
-				if(item.id != self.model.id) {
-					item.isChecked() && item.unChecked()
-				} else {
-					!self.model.isChecked() && self.model.setCheck()
-				}
-			});
+		editElement: function() {
+			// console.log('This is checked');
+			this.model.setCheck();
 		}
 	});
 });

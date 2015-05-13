@@ -1,7 +1,7 @@
 define('collection/page', ['backbone', 'localforage', 'indexeddb', 'model/page'], function(Backbone, localforage, indexeddb, pageModel) {
 	return Backbone.Collection.extend({
 		model: pageModel,
-		sync: Backbone.localforage.sync('h5Custom'),
+		sync: Backbone.localforage.sync('list'),
 		getOnePage: function(aid) {
 			return this.where({aid: aid});
 		},

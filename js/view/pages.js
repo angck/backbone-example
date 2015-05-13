@@ -2,17 +2,22 @@ define('view/pages', ['backbone', 'view/page'], function(Backbone, PageView) {
 	return Backbone.View.extend({
 		el: $('.pageList'),
 		events: {
-			'click #addPage': 'createOne'
+			'click #addPage': 'createOne',
+			'click .removeAll': 'removeAll'
 		},
 		initialize: function() {
 			this.listenTo(this.model, 'add', this.addOne);
-			// this.listenTo(this.model, 'change', this.setChecked);
 			this.listenTo(this.model, 'remove', this.removeItem);
+			this.listenTo(this.model, 'reset', this.reset);
+			this.listenTo(this.model, 'change', this.changeAttr);
 			this._itemsView = {};
 		},
-		render: function() {
+		render: function(model, options) {
 			this.model.map(this.addOne, this);
 			return this;
+		},
+		reset: function(model, options) {
+			options.previousModels.map(this.removeItem, this);
 		},
 		addOne: function(model) {
 			var pageView = new PageView({
@@ -46,6 +51,9 @@ define('view/pages', ['backbone', 'view/page'], function(Backbone, PageView) {
 			this._itemsView[model.id] = null;
 			delete this._itemsView[model.id];
 		},
+		removeAll: function() {
+			this.model.removeAll();
+		},
 		resetNext: function(models) {
 			_.each(models, function(model, i, list) {
 				model.save('aid', model.get('aid') - 1);
@@ -56,17 +64,25 @@ define('view/pages', ['backbone', 'view/page'], function(Backbone, PageView) {
 				return model.get('aid') > id
 			});
 		},
-		/*filterModels: function(model) {
-			return this.model.filter(function(m) {
-				return model.id != m.id
+		filterOther: function(id) {
+			return this.model.filter(function(model) {
+				return model.get('aid') !== id;
 			});
-		},*/
-		/*setChecked: function(model, options) {
-			this.model.each(function(item, i, models){
-				if(item.id != model.id) {
-					item.unChecked()
-				}
-			});
-		}*/
+		},
+		changeAttr: function(model, options) {
+			var otherModels;
+			if(model.changed.checked) {
+				otherModels = this.filterOther(model.get('aid'));
+				_.each(otherModels, function(m) {
+					m.save('checked', false);
+				});
+				this.resetRender();
+				this.render();
+			}
+		},
+		resetRender: function() {
+			this.model.reset();
+			this.model.fetch();
+		}
 	});
 });

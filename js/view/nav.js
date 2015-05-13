@@ -1,4 +1,4 @@
-define('view/nav', ['backbone'], function(Backbone) {
+define('view/nav', ['backbone', 'unit/dialog'], function(Backbone, Dialog) {
 	return Backbone.View.extend({
 		el: $('#navigator'),
 		template: _.template($('#navTemplate').html()),
@@ -15,7 +15,7 @@ define('view/nav', ['backbone'], function(Backbone) {
 		dialog: function(e) {
 			var target = e.target || e.srcElement,
 				element = $(target);
-			console.log(element.attr('ctype'));
+			Dialog.initialize(element.attr('ctype'));
 		}
 	});
 });
