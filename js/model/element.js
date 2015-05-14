@@ -3,11 +3,10 @@ define('model/element', ['backbone', 'localforage', 'indexeddb'],function(Backbo
 		sync: Backbone.localforage.sync('element'),
 		defaults: {
 			aid: 1,
-			pageId: 1,
-			className: 'page',
+			className: 'element',
 			styleSheets: '',
 			animate: ''
-			element: '这里是文字';
+			element: '这里是内容区域';
 		}
 	});
 });

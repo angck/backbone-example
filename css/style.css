@@ -32,7 +32,7 @@ body .fn-hide { display: none }
 .fn-linear-light { background: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#f9f9f9)); background: -moz-linear-gradient(top, #fcfcfc, #f9f9f9); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc', endColorstr='#f9f9f9'); background: -o-linear-gradient(top, #fcfcfc, #f9f9f9); background: -ms-linear-gradient(top, #fcfcfc, #f9f9f9); background: linear-gradient(to bottom, #fcfcfc, #f9f9f9) }
 .fn-rmb { font-family: arial; font-style: normal; padding-right: 4px }
 .fn-webkit-adjust { -webkit-text-size-adjust: none }
-.creat_head { height: 50px; background-color: #08a1ef; position: fixed; width: 100%; left: 0; right: 0; top: 0; z-index: 999 }
+.creat_head { height: 50px; background-color: #08a1ef; position: fixed; width: 100%; left: 0; right: 0; top: 0; z-index: 99 }
 .creat_head .creat_head_con { width: 1000px; left: 50%; margin-left: -500px; position: relative }
 .creat_head .creat_head_con .creat_logo, .creat_head .creat_head_con .creat_con { float: left; display: inline }
 .creat_head .creat_head_con .creat_save { float: right; padding-top: 7px }
@@ -64,18 +64,18 @@ a:focus, a:hover { text-decoration: none }
 .creat_head { background: #37C249 }
 .container { width: 1000px; margin: 0 auto }
 .creat_head .creat_head_con .creat_con ul li:hover span, .creat_head .create-action li.save:hover, .creat_head .create-action li.publish:hover { background-color: #049600 }
-.wrapper { padding: 80px 0 0 }
+.wrapper { padding: 80px 0 0; overflow: hidden; }
 .pageList { width: 260px; height: 528px; float: left; margin-right: 30px; background: #fff; padding: 0 0 40px; position: relative }
 .pageList h2 { background: #37C249; font-size: 16px; padding: 10px 15px; color: #fff; line-height: 1; font-weight: 200 }
-.pageList .removeAll {position: absolute; font-size: 12px; color: #fff; line-height: 16px; right: 15px;}
+.pageList .removeAll { position: absolute; font-size: 12px; color: #fff; line-height: 16px; right: 15px; }
 .setViewContent { width: 300px; height: 566px; float: right; background: #fff }
 .appView { width: 320px; height: 568px; background-image: url(../images/5.png); background-repeat: no-repeat; background-size: 320px; border: 1px solid #fff; float: left; position: relative }
 .appView .appTitle { padding-top: 20px; height: 44px; line-height: 44px; text-align: center; color: #fff; font-size: 18px }
 #pageList { padding: 10px 10px 0; overflow: auto; height: 493px }
-#pageList li { line-height: 20px; background: #ddd; margin: 0 0 10px; cursor: pointer; color: #666; position: relative }
-#pageList li strong {display: block; padding: 10px; }
-#pageList li.current { background: #37C249; color: #fff }
-#pageList li.current span { color: #666 }
+#pageList div { line-height: 20px; background: #ddd; margin: 0 0 10px; cursor: pointer; color: #666; position: relative }
+#pageList div strong { display: block; padding: 10px; }
+#pageList .current { background: #37C249; color: #fff }
+#pageList .current span { color: #666 }
 #pageList .destroy { position: absolute; top: 50%; right: 20px; margin: -10px; padding: 1px 7px 2px; text-align: center; background: rgba(0, 0, 0, .6); color: #fff; border-radius: 100%; display: none }
 #pageList li:hover .destroy { display: block }
 #pageList span { float: left; background: #fff; width: 20px; line-height: 1; padding: 4px 0; text-align: center; border-radius: 100%; font-size: 10px; font-family: Arial; margin-right: 10px }
@@ -83,3 +83,21 @@ a:focus, a:hover { text-decoration: none }
 #addPage:hover { background: #555 }
 .pageBG, .appSound { background: #666; color: #fff; position: absolute; left: -20px; top: 64px; width: 20px; padding: 2px 0 5px; text-align: center; line-height: 16px }
 .appSound { right: -20px; left: auto }
+
+/*Dialog css*/
+.dialog { background: #fff; position: fixed; left: 50%; top: 50%; width: 600px; }
+.dialog .head { background: #37C249; color: #fff; padding: 8px 16px; font-size: 14px; position: relative; }
+.dialog .closeDialog { color: #fff; padding: 3px 12px; font-size: 21px; position: absolute; right: 0; top: 0; -webkit-transition: -webki-transform .5s ease; -moz-transition: -moz-transform .5s ease; transition: transform .5s ease; }
+.dialog .closeDialog:hover { transform: rotate(360deg); }
+.dialog .content { padding: 16px; }
+.dialog .buttonGroup { padding: 10px 16px; font-size: 0; border-top: 1px solid #ddd; text-align: right; }
+.dialog .buttonGroup a { font-size: 14px; display: inline-block; padding: 6px 20px; transition: background .5s ease; }
+.dialog .buttonGroup .confirm { background: #F80; color: #fff; margin-right: 20px; }
+.dialog .buttonGroup .confirm:hover { background: #FF7200; }
+.dialog .buttonGroup .cancel { background: #888; color: #fff; }
+.dialog .buttonGroup .cancel:hover { background: #666; }
+.dialogMask { width: 100%; height: 100%; background: #000; position: fixed; left: 0; top: 0; }
+
+/*form*/
+input[type=number],input[type=search],input[type=text],input[type=password],input[type=datetime],input[type=datetime-local],input[type=date],input[type=month],input[type=time],input[type=week],input[type=email],input[type=url],input[type=tel],input[type=color],select,textarea { padding: 6px; border-radius: 3px; -webkit-appearance: none; border: 1px solid #aaa; min-width: 200px;}
+input:focus,select:focus,textarea {outline: none;}

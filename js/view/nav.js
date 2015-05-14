@@ -1,4 +1,4 @@
-define('view/nav', ['backbone', 'unit/dialog'], function(Backbone, Dialog) {
+define('view/nav', ['backbone', 'unit/navDialog'], function(Backbone, Dialog) {
 	return Backbone.View.extend({
 		el: $('#navigator'),
 		template: _.template($('#navTemplate').html()),

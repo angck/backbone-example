@@ -69,6 +69,9 @@ define('view/pages', ['backbone', 'view/page'], function(Backbone, PageView) {
 				return model.get('aid') !== id;
 			});
 		},
+		setUnChecked: function(model) {
+
+		},
 		changeAttr: function(model, options) {
 			var otherModels;
 			if(model.changed.checked) {

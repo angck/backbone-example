@@ -12,7 +12,6 @@ define('model/page', ['backbone', 'localforage', 'indexeddb'], function(Backbone
 		},
 		setCheck: function() {
 			this.save({checked: true});
-			console.log(1111);
 		},
 		unChecked: function() {
 			this.save({checked: false});
