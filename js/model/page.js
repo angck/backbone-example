@@ -3,7 +3,6 @@ define('model/page', ['backbone', 'localforage', 'indexeddb'], function(Backbone
 		sync: Backbone.localforage.sync('item'),
 		defaults: {
 			aid: 1,
-			backgroundColor: '',
 			backgroundImage: '',
 			checked: false
 		},

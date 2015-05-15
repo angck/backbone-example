@@ -41,5 +41,5 @@ require(['backbone', 'view/nav', 'collection/page', 'view/pages'], function(Back
 		model: collPage
 	});
 
-	collPage.fetch();
+	console.log(pageList.setUnChecked());
 });

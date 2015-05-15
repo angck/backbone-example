@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="language" content="en" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link href="css/color.css" rel="stylesheet" type="text/css">
+    <title>colorPicker_new</title>
+</head>
+
+<body>
+<div class="limiter">
+    <h1>ColorPicker <small>(v. 1.0)</small> and Colors</h1>
+    <p><strong>ColorPicker</strong> v1.0 is a small (45.4KB, 19.5KB gZip) but very advanced <strong>framework independent</strong> javaScript color picker and color conversion / calculation tool that supports the following color spaces: rgb, hsv, hsl, hex, cmyk, cmy, XYZ, Lab but also alpha, WCAG 2.0 readability standards (based on opacity levels of all layers), contrast, color similarity, grayscale, 2-layer or 3-layer overlap mix, etc...</p>
+
+    <h2>Demo and test area</h2>
+    <p>This demo section shows how ColorPicker's and Colors' APIs work and how they communicate to the outer world.<br>The initial setup: ColorPicker UI (user interface) to the left as a standalone instance and test patches to the right (also interactive) connected to a separate instance of Colors.<br>Use the drop down menu to connect the patches with its own Colors instance or to sync with the instance of ColorPicker.</p>
+    <div class="wrapper">
+        <div id="testPatch">.</div>
+
+        <div id="contrastPatch">
+            <div></div>
+            <i>-Test-</i>
+        </div>
+
+        <div id="colorValues">.</div>
+
+        <div id="sliders" class="sliders">
+            <div id="rgbR"><div></div></div>
+            <div id="rgbG"><div></div></div>
+            <div id="rgbB"><div></div></div>
+
+            <div id="hslH"><div></div></div>
+            <div id="hslS"><div></div></div>
+            <div id="hslL"><div></div></div>
+        </div>
+
+        <div id="hsv_map">
+            <canvas id="surface" width="200" height="200"></canvas>
+            <div class="cover"></div>
+            <div class="hsv-cursor"></div>
+            <div class="bar-bg"></div>
+            <div class="bar-white"></div>
+            <canvas id="luminanceBar" width="25" height="200"></canvas>
+            <div class="hsv-barcursors" id="hsv_cursors">
+                <div class="hsv-barcursor-l"></div>
+                <div class="hsv-barcursor-r"></div>
+            </div>
+        </div>
+
+        <div id="color_squares">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="description">
+            Change drop down to connect test patches to Colors instance or to ColorPicker:
+            <select>
+                <option value="Colors">Colors</option>
+                <option value="ColorPicker">ColorPicker</option>
+            </select>
+        </div>
+    </div>
+
+    <h2>Demo of simple javaScript implementation</h2>
+    <p>This demo uses jsColor.js (3.8KB), a javaScript only implementation of colors.js and colorPicker.js<br>
+    Calling the colorPicker on all inputs with the className 'color': <pre>jsColorPicker('input.color');</pre></p>
+    <p>
+        <input class="color" value="#B6BD79" />
+        <input class="color" value="rgb(162, 63, 3)" />
+        <input class="color" value="hsla(32, 95%, 23%, 0.9)" />
+    </p>
+    <p>See also a simple <a href="http://www.dematte.at/cpn/jQuery_implementation/">jQuery implementation preview here</a></p>
+
+    <h2>Short description</h2>
+    <p>ColorPicker is very convenient and intuitive to use due to</p>
+    <ul>
+        <li>its 4 different UI sizes (advanced, smaller, simple and tiny. From expert use to simple color picking),</li>
+         <li>its big variety of visualized color spaces (rgb, hsv and hsl),</li>
+         <li>its convenient multiple usage of input fields (typing, arrow/page keys or dragging for value changes),</li>
+         <li>its practical color value memory slots,</li>
+         <li>its fast, responsive and supportive cursor rendering,</li>
+         <li>its feasible color comparison tools,</li>
+         <li>its big variety of options and API for out of the box configuration for individual needs,</li>
+         <li>its compact design that tries to fit all possible situations while giving best overview over relevant data,</li>
+         <li>etc... play around with the demo to find out what ColorPicker provides...</li>
+     </ul>
+
+    <p>ColorPicker runs within all browsers including IE7+ (theoretically also IE5.5+ and mobile devices with some modifications) can be called within 1 single file (color.all.min.js 45.4KB, 19.5KB gZip including HTML, CSS and some images),<br>
+    although it's separated into 4 components for flexible customization, developing and handling:</p>
+    <ul>
+        <li><strong>colors.js</strong> the brain that calculates all colors and color dependent components.<br>Can be used separately to build your own color tool.<br>colors.js can convert 182 different combinations of color spaces (rgb2HSV, RGB2hsl, cmyk2hsl, rgb2RGB, HEX2Lab, ...)</li>
+        <li><strong>colorPicker.js</strong> the UI (user interface) that renders in your browser and handles user interactions</li>
+        <li><strong>colorPicker.data.js</strong> the HTML, CSS (functional and visual UI) and 5 images including transparent cursor. All those can be customized. There are tools for customizations available, or it can be dropped for development or if there is custom components available</li>
+        <li><strong>jsColor.js or jqColor.js</strong> the plain javaScript or jQuery implementation for out of the box usage of ColorPicker or for simple development for all your needs without having to dig deep into the rest of the code. See this as a simple API usage example for your implementations. Find single file versions in according folders.</li>
+    </ul>
+
+
+    <p>The demos and the implementations show how easy it is to build your own color picker with colors.js (8.46KB) that could be used as a mobile device color chooser or an advanced color calculation tool. Be creative and use colors' or ColorPicker's clean, intuitive and convenient API to create your own great tools.</p>
+
+    <h2>Some technical facts:</h2>
+    <p>ColorPicker is faster and more efficient than most other tools of its kind due to a smart combination of some technics like:</p>
+    <ul>
+        <li>intensive usage of fast cache, cache queries and buffering of elements, styles and color calculations</li>
+        <li>simple and effective DOM manipulation (fastest old school technics for broadest browser coverage)</li>
+        <li>strict separation of UI interactions, calculations and rendering</li>
+        <li>usage of requestAnimationFrame for optimized rendering speed</li>
+        <li>heaviest (pre-)calculations in non-critical situations</li>
+        <li>a smart layer rendering technic makes ColorPicker also small and compact (fast download of a single small file)</li>
+        <li>shared and pre-calculated resources (almost all functions, HTML, CSS, etc.) between instances makes processing way faster and needs less memory. A newly developed OOP design pattern makes privacy and reuse possible and results in a clean and non distracting API and data model.</li>
+    </ul>
+
+    <h2>Documentation: API and technical details</h2>
+    <p>For more details and the full API description of ColorPicker see <a href="https://github.com/PitPik/colorPicker">https://github.com/PitPik/colorPicker</a></p>
+</div>
+<div class="footer"><em>powered by:</em> <strong>weekendProductions</strong> - © 2014 <a href="http://dematte.at" style="font-weight:normal">Peter Dematté</a></div>
+<!-- <div id="model_display"></div> -->
+<!--canvas style="position: absolute; left: 500px; width: 255px; height: 255px" id="canvas"></canvas-->
+
+<!-- <script type="text/javascript" src="colors.js"></script> -->
+<!-- script type="text/javascript" src="tools.js"></script -->
+<!-- <script type="text/javascript" src="colorPicker.data.js"></script> -->
+<!-- <script type="text/javascript" src="colorPicker.js"></script> -->
+<!-- <script type="text/javascript" src="color.all.min.js"></script> -->
+<script type="text/javascript" src="js/lib/jsColorPicker.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+
+
+<!-- <script type="text/javascript" src="jsColor.js"></script> -->
+<script type="text/javascript">
+    var colors = jsColorPicker('input.color', {
+        customBG: '#222',
+        readOnly: true,
+        init: function(elm, colors) {
+          elm.style.backgroundColor = elm.value;
+          elm.style.color = colors.rgbaMixCustom.luminance > 0.22 ? '#222' : '#ddd';
+        }
+      });
+</script>
+
+<a href="https://github.com/PitPik/colorPicker"><img style="position: absolute; top: 0; right: 0; border: 0;" src="fmog.png" alt="Fork me on GitHub"></a>
+</body>
+
+</html>

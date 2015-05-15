@@ -11,6 +11,8 @@ define('view/pages', ['backbone', 'view/page'], function(Backbone, PageView) {
 			this.listenTo(this.model, 'reset', this.reset);
 			this.listenTo(this.model, 'change', this.changeAttr);
 			this._itemsView = {};
+
+			this.model.fetch();
 		},
 		render: function(model, options) {
 			this.model.map(this.addOne, this);
