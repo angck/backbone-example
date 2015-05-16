@@ -2,7 +2,7 @@ html { color: #000; background: #eee; -webkit-text-size-adjust: 100%; -ms-text-s
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { margin: 0; padding: 0 }
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block }
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1 }
-body, button, input, select, textarea { font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", \5b8b\4f53 }
+body, button, input, select, textarea { font: 12px/1.5 tahoma, arial, "Hiragino Sans GB", '\5b8b\4f53' }
 input, select, textarea { font-size: 100% }
 table { border-collapse: collapse; border-spacing: 0 }
 fieldset, img { border: 0 }
@@ -34,7 +34,7 @@ body .fn-hide { display: none }
 .fn-webkit-adjust { -webkit-text-size-adjust: none }
 .creat_head { height: 50px; background-color: #08a1ef; position: fixed; width: 100%; left: 0; right: 0; top: 0; z-index: 99 }
 .creat_head .creat_head_con { width: 1000px; left: 50%; margin-left: -500px; position: relative }
-.creat_head .creat_head_con .creat_logo, .creat_head .creat_head_con .creat_con { float: left; display: inline }
+.creat_head .creat_head_con .creat_logo, .creat_head .creat_head_con .creat_con { float: left;}
 .creat_head .creat_head_con .creat_save { float: right; padding-top: 7px }
 .creat_head .creat_head_con .creat_con ul { margin-left: 45px }
 .creat_head .creat_head_con .creat_con ul li { cursor: pointer; float: left; color: #FFF; width: 60px; text-align: center; height: 50px; line-height: 50px }
@@ -75,7 +75,7 @@ a:focus, a:hover { text-decoration: none }
 .appView .appTitle { padding-top: 20px; height: 44px; line-height: 44px; text-align: center; color: #fff; font-size: 18px }
 #pageList { padding: 10px 10px 0; overflow: auto; height: 493px }
 #pageList div { line-height: 20px; background: #ddd; margin: 0 0 10px; cursor: pointer; color: #666; position: relative }
-#pageList div strong { display: block; padding: 10px; }
+#pageList div strong { display: block; padding: 10px; font-weight: 500;}
 #pageList .current { background: #37C249; color: #fff }
 #pageList .current span { color: #666 }
 #pageList .destroy { position: absolute; top: 50%; right: 20px; margin: -10px; padding: 1px 7px 2px; text-align: center; background: rgba(0, 0, 0, .6); color: #fff; border-radius: 100%; display: none }
