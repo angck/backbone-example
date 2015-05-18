@@ -333,28 +333,28 @@
   }
 }
 @-webkit-keyframes jello {
-  11
-  22
-  33
-  44
-  55
-  66
-  77
-  88
+  11%,
+  22%,
+  33%,
+  44%,
+  55%,
+  66%,
+  77%,
+  88%,
   100% {
     -webkit-transform: none;
     transform: none
   }
 }
 @keyframes jello {
-  11
-  22
-  33
-  44
-  55
-  66
-  77
-  88
+  11%,
+  22%,
+  33%,
+  44%,
+  55%,
+  66%,
+  77%,
+  88%,
   100% {
     -webkit-transform: none;
     transform: none
