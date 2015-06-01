@@ -18,7 +18,7 @@ require.config({
 	}
 });
 
-require(['backbone', 'view/nav', 'collection/page', 'view/pages'], function(Backbone, ViewNav, CollectionPage, ViewPages) {
+require(['backbone', 'model/navigator', 'view/nav', 'collection/page', 'view/pages'], function(Backbone, mNavigator, ViewNav, CollectionPage, ViewPages) {
 	// 创建管理导航
 	var navList = [
 			{type: 'text', className: 'text', text: '文本'},
@@ -30,16 +30,25 @@ require(['backbone', 'view/nav', 'collection/page', 'view/pages'], function(Back
 			{type: 'button', className: 'button', text: '按钮'},
 			{type: 'phone', className: 'phone', text: '电话'},
 			{type: 'contact', className: 'contact', text: '联系人'}
-		],
-		navView = new ViewNav({
-			model: new Backbone.Model(navList)
-		});
+		];
+
+    var modelNavigator = new mNavigator(navList);
+
+    modelNavigator.on('text', function() {
+        alert('text');
+    });
+
+    modelNavigator.on('bg', function() {
+       alert('bg');
+    });
+
+    navView = new ViewNav({
+        model: modelNavigator
+    });
 
 	var collPage = new CollectionPage;
 
 	var pageList = new ViewPages({
 		model: collPage
 	});
-
-	console.log(pageList.setUnChecked());
 });
