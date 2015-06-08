@@ -34,21 +34,21 @@ require(['backbone', 'model/navigator', 'view/nav', 'collection/page', 'view/pag
 
     var modelNavigator = new mNavigator(navList);
 
+    var navigatorView = new ViewNav({
+        model: modelNavigator
+    });
+
+    var collPage = new CollectionPage;
+
+    var pageList = new ViewPages({
+        model: collPage
+    });
+
     modelNavigator.on('text', function() {
         alert('text');
     });
 
     modelNavigator.on('bg', function() {
-       alert('bg');
+
     });
-
-    navView = new ViewNav({
-        model: modelNavigator
-    });
-
-	var collPage = new CollectionPage;
-
-	var pageList = new ViewPages({
-		model: collPage
-	});
 });

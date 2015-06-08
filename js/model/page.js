@@ -17,6 +17,9 @@ define('model/page', ['backbone', 'localforage', 'indexeddb'], function(Backbone
 		},
 		unChecked: function() {
 			this.save({checked: false});
-		}
+		},
+        checked: function() {
+            return this.where({checked: true});
+        }
 	});
 });
