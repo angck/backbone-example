@@ -5,8 +5,8 @@ define('model/element', ['backbone', 'localforage', 'indexeddb'],function(Backbo
 			aid: 1,
 			className: 'element',
 			styleSheets: '',
-			animate: ''
-			element: '这里是内容区域';
+			animate: '',
+			element: '这里是内容区域'
 		}
 	});
 });

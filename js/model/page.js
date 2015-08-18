@@ -6,6 +6,9 @@ define('model/page', ['backbone', 'localforage', 'indexeddb'], function(Backbone
 			backgroundImage: '',
 			checked: false
 		},
+		setBackground: function(str){
+			return this.save({backgroundImage: str});
+		},
 		isChecked: function() {
 			return this.get('checked');
 		},
@@ -14,6 +17,9 @@ define('model/page', ['backbone', 'localforage', 'indexeddb'], function(Backbone
 		},
 		unChecked: function() {
 			this.save({checked: false});
-		}
+		},
+        checked: function() {
+            return this.where({checked: true});
+        }
 	});
 });

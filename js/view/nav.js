@@ -3,7 +3,7 @@ define('view/nav', ['backbone', 'unit/navDialog'], function(Backbone, Dialog) {
 		el: $('#navigator'),
 		template: _.template($('#navTemplate').html()),
 		events: {
-			'click .dialog-model' : 'dialog',
+			'click .dialog-model' : 'dialog'
 		},
 		initialize: function() {
 			this.nav = $('#navigator');
@@ -15,7 +15,7 @@ define('view/nav', ['backbone', 'unit/navDialog'], function(Backbone, Dialog) {
 		dialog: function(e) {
 			var target = e.target || e.srcElement,
 				element = $(target);
-			Dialog.initialize(element.attr('ctype'));
+			Dialog.initialize(element.attr('ctype'), this.model);
 		}
 	});
 });
